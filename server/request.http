@@ -1,0 +1,54 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username" : "boybetby",
+    "password" : "0913722662"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username" : "boybetby",
+    "password" : "0913722662"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWFjODQxMGE0ZmI2YzFjNWU4MzFjNDgiLCJpYXQiOjE2Mzg2OTg0MTN9.c_SoZrfWgA8RrPncxs4KH-DkQd2TCSdC9adieZinOds
+
+{
+    "title" : "third post",
+    "description" : "REACT",
+    "url" : "google.com",
+    "status" : "LEARNING"
+}
+
+###
+
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWFjODQxMGE0ZmI2YzFjNWU4MzFjNDgiLCJpYXQiOjE2Mzg2OTg0MTN9.c_SoZrfWgA8RrPncxs4KH-DkQd2TCSdC9adieZinOds
+
+###
+
+PUT http://localhost:5000/api/posts/61ac8e5380cc075bbefdffc1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWFjODQxMGE0ZmI2YzFjNWU4MzFjNDgiLCJpYXQiOjE2Mzg2OTg0MTN9.c_SoZrfWgA8RrPncxs4KH-DkQd2TCSdC9adieZinOds
+
+{
+    "title" : "edited third post",
+    "description" : "REACT",
+    "url" : "google.com",
+    "status" : "TO LEARN"
+}
+
+
+###
+
+DELETE http://localhost:5000/api/posts/61ac8e5380cc075bbefdffc1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWFjODQxMGE0ZmI2YzFjNWU4MzFjNDgiLCJpYXQiOjE2Mzg2OTg0MTN9.c_SoZrfWgA8RrPncxs4KH-DkQd2TCSdC9adieZinOds
